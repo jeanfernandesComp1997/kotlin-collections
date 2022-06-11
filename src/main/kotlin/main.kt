@@ -1,24 +1,10 @@
 fun main() {
-    val database = NamesDataBase()
+    val watchedMicroservicesCourse = listOf("Jean", "Felipe", "Leo")
+    val watchedKotlinCourse = listOf("Jean", "Felipe", "Carlos")
 
-    val savedNames = database.names
-    println(savedNames)
+    val watchedBoth = watchedKotlinCourse + watchedMicroservicesCourse
 
-    database.save("Jean")
-
-    println(database.names)
-    println(NamesDataBase().names)
+    println(watchedBoth.distinct())
 }
 
-class NamesDataBase {
-    // private val _names = mutableListOf<String>()
-    val names: Collection<String> get() = data.toList()
 
-    companion object {
-        private val data = mutableListOf<String>()
-    }
-
-    fun save(name: String) {
-        data.add(name)
-    }
-}
