@@ -10,6 +10,10 @@ fun main() {
     val watchedBoth = watchedKotlinCourse + watchedMicroservicesCourse
 
     println(watchedBoth)
+
+    println(watchedKotlinCourse union watchedMicroservicesCourse)
+    println(watchedKotlinCourse - watchedMicroservicesCourse)
+    println(watchedKotlinCourse subtract watchedMicroservicesCourse)
 }
 
 
