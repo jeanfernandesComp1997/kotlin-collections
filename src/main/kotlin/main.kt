@@ -1,5 +1,41 @@
 fun main() {
-//    mapOf(
+    val orders = mutableMapOf(
+        Pair(3, 15.0),
+        1 to 20.0,
+        2 to 34.0
+    )
+
+//    val orderValue = orders.getValue(5)
+//    println(orderValue)
+
+    val message = orders.getOrElse(5) {
+        "Order not found!"
+    }
+    println(message)
+
+    val message2 = orders.getOrDefault(5, -1.0)
+    println(message2)
+
+    println(orders.keys)
+    println(orders.values)
+
+    for (number in orders.keys) {
+        println("Order $number")
+    }
+
+    for (value in orders.values) {
+        println("Order $value")
+    }
+
+    val filteredOrders = orders.filter { (number, value) ->
+        number % 2 == 0 && value > 15
+    }
+
+    println("Filtered orders: $filteredOrders")
+}
+
+fun testMap() {
+    //    mapOf(
 //        Pair(1, 20.0),
 //        Pair(2, 34.0)
 //    )
