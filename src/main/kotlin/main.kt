@@ -32,6 +32,26 @@ fun main() {
     }
 
     println("Filtered orders: $filteredOrders")
+
+    println(orders + Pair(7, 90.0))
+    println(orders - 7)
+    println(orders - listOf(2, 1))
+
+    //orders.putAll(setOf(7 to 90.0, 8 to 20.0))
+    orders += setOf(7 to 90.0, 8 to 20.0)
+    println(orders)
+
+    orders.remove(3)
+    println(orders)
+
+    orders.values.remove(70.0)
+    println(orders)
+
+    orders.values.remove(20.0)
+    println(orders)
+
+    orders -= 8
+    println(orders)
 }
 
 fun testMap() {
