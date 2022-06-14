@@ -19,6 +19,19 @@ fun main() {
         order.value > 20.0
     }
     println(ordersFreeShipping)
+
+
+    val ordersFreeShippingGroup = orders.groupBy { order ->
+        order.value > 20.0
+    }
+    println(ordersFreeShippingGroup)
+
+    val names = listOf("Jean", "Carol", "Gabriel", "Geane")
+
+    val agenda: Map<Char, List<String>> = names.groupBy { name ->
+        name.first()
+    }
+    println(agenda)
 }
 
 data class Order(
