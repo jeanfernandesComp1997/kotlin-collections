@@ -14,6 +14,13 @@ fun main() {
     println(watchedKotlinCourse union watchedMicroservicesCourse)
     println(watchedKotlinCourse - watchedMicroservicesCourse)
     println(watchedKotlinCourse subtract watchedMicroservicesCourse)
+
+    println(watchedKotlinCourse intersect watchedMicroservicesCourse)
+
+    val watchedList = watchedBoth.toMutableList()
+    watchedList.add("Jean")
+    println(watchedList)
+    println(watchedList.toSet())
 }
 
 
